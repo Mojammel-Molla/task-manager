@@ -4,26 +4,6 @@ import TaskList from './TaskList';
 import AddTaskModal from './AddTaskModal';
 
 const TaskBody = () => {
-  const defaultTask = [
-    {
-      id: crypto.randomUUID(),
-      title: 'Integration API',
-      description:
-        'Connect an existing API to a third-party database using secure methods and handle data exchange efficiently.',
-      tags: ['Web', 'Python', 'API'],
-      priority: 'High',
-      isFavorite: false,
-    },
-    {
-      id: crypto.randomUUID(),
-      title: 'Integration API',
-      description:
-        'Connect an existing API to a third-party database using secure methods and handle data exchange efficiently.',
-      tags: ['Web', 'Python', 'API'],
-      priority: 'High',
-      isFavorite: true,
-    },
-  ];
   const [tasks, setTasks] = useState(defaultTask);
   const [showAddModal, setShowAddModal] = useState(false);
 

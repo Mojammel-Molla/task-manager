@@ -1,4 +1,4 @@
-const TaskAction = ({ handleAddTask }) => {
+const TaskAction = ({ onAddClick }) => {
   return (
     <div className="flex items-center space-x-5">
       <form>
@@ -36,7 +36,7 @@ const TaskAction = ({ handleAddTask }) => {
         </div>
       </form>
       <button
-        onClick={handleAddTask}
+        onClick={onAddClick}
         className="rounded-md bg-blue-500 px-3.5 py-2.5 text-sm font-semibold"
       >
         Add Task

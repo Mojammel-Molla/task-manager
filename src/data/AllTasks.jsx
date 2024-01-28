@@ -2,7 +2,7 @@ import { createContext } from 'react';
 
 export const TaskContext = createContext(null);
 
-const AllTasks = () => {
+const AllTasks = ({ children }) => {
   const allTask = [
     {
       id: crypto.randomUUID(),
@@ -15,7 +15,7 @@ const AllTasks = () => {
     },
     {
       id: crypto.randomUUID(),
-      title: 'Integration API',
+      title: 'Integration',
       description:
         'Connect an existing API to a third-party database using secure methods and handle data exchange efficiently.',
       tags: ['Web', 'Python', 'API'],
@@ -23,6 +23,7 @@ const AllTasks = () => {
       isFavorite: true,
     },
   ];
+
   return (
     <div>
       <TaskContext.Provider value={allTask}>{children}</TaskContext.Provider>

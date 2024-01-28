@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
-import { TaskContext } from './data/AllTasks.jsx';
+import AllTasks from './data/AllTasks.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <TaskContext>
+    <AllTasks>
       <App />
-    </TaskContext>
+    </AllTasks>
   </React.StrictMode>
 );

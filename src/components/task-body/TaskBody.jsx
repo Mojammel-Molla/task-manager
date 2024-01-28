@@ -1,12 +1,17 @@
-import { useState } from 'react';
+// import { useContext } from 'react';
 import TaskAction from './TaskAction';
-import TaskList from './TaskList';
+
 import AddTaskModal from './AddTaskModal';
+// import { TaskContext } from '../../data/AllTasks';
+import TaskList from './TaskList';
+import { useState } from 'react';
+import UseTasks from '../../data/useTasks';
 
 const TaskBody = () => {
-  const [tasks, setTasks] = useState(defaultTask);
+  // const [allTask] = useContext(TaskContext);
   const [showAddModal, setShowAddModal] = useState(false);
-
+  const allTask = UseTasks();
+  console.log(allTask);
   const handleAddTask = () => {
     setShowAddModal(true);
   };
@@ -18,7 +23,7 @@ const TaskBody = () => {
         <TaskAction handleAddTask={handleAddTask} />
       </div>
       <div className="overflow-auto">
-        <TaskList tasks={tasks} />
+        <TaskList allTask={allTask} />
       </div>
     </div>
   );
